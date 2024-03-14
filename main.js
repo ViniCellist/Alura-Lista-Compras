@@ -1,4 +1,5 @@
 let itemsList = [];
+let itemToEdit;
 
 const form = document.getElementById('form-itens');
 const itensInput = document.getElementById('receber-item');
@@ -49,9 +50,11 @@ function showItem() {
                     <li class="item-compra is-flex is-justify-content-space-between" data-value="${index}">
                     <div>
                         <input type="checkbox" class="is-clickable" />
-                        <input type="text" class="is-size-5" value="${e.valor}"></input>
+                        <input type="text" class="is-size-5" value="${e.valor}" ${index != itemToEdit ? 'disabled' : ''}></input>
                     </div>
+
                     <div>
+                        ${index == itemToEdit ? '<button onclick="saveEdit()"><i class="fa-regular fa-floppy-disk is-clickable"></i>' : '<i class="fa-regular is-clickable fa-pen-to-square editar"></i></button>'}
                         <i class="fa-solid fa-trash is-clickable deletar"></i>
                     </div>
                 </li>
@@ -68,4 +71,29 @@ function showItem() {
         });
     });
 
+    const deleteObject = document.querySelectorAll('.deletar');
+    deleteObject.forEach(i => {
+        i.addEventListener('click', (e) => {
+            const elementValue = e.target.parentElement.parentElement.getAttribute('data-value');
+            itemsList.splice(elementValue, 1);
+            showItem();
+        });
+    });
+
+    const editItem = document.querySelectorAll('.editar');
+    editItem.forEach(i => {
+        i.addEventListener('click', (e) => {
+            itemToEdit = e.target.parentElement.parentElement.getAttribute('data-value');
+
+            showItem();
+        });
+    });
+
 };
+
+function saveEdit() {
+    const editedItem = document.querySelector(`[data-value="${itemToEdit}"] input[type="text"]`);
+    itemsList[itemToEdit].value = editedItem.value;
+    itemToEdit = -1;
+    showItem()
+}
