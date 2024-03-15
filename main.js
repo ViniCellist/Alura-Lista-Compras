@@ -5,6 +5,18 @@ const form = document.getElementById('form-itens');
 const itensInput = document.getElementById('receber-item');
 const ulItems = document.getElementById('lista-de-itens');
 const ulItemsBuyed = document.getElementById('itens-comprados');
+const recoveredList = localStorage.getItem('itemsList');
+
+function updateLocalStorage(){
+    localStorage.setItem('itemsList', JSON.stringify(itemsList));
+};
+
+if(recoveredList) {
+    itemsList = JSON.parse(recoveredList);
+    showItem();
+} else {
+    itemsList = [];
+};
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -90,6 +102,8 @@ function showItem() {
     });
 
 };
+
+updateLocalStorage();
 
 function saveEdit() {
     const editedItem = document.querySelector(`[data-value="${itemToEdit}"] input[type="text"]`);
