@@ -1,38 +1,66 @@
-#Projeto Lista de Compras - Utilizado no Curso Objetos no JavaScript - Escola Front-End Alura
+# Alura-Lista de Compras
+ 
+This is a solution to the [JavaScript: manipulando objetos](https://cursos.alura.com.br/course/javascript-manipulando-objetos). Alura Front-end school help you improve your coding skills by building realistic projects.  
 
-Neste arquivo encontram-se modelos de códigos que serão utilizados no decorrer do curso. 
+## Table of contents
 
-Código modelo da li "Comprados":
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-    <li class="item-compra is-flex is-justify-content-space-between" data-value="">
-        <div>
-            <input type="checkbox" checked class="is-clickable" />  
-            <span class="itens-comprados is-size-5"></span>
-        </div>
-        <div>
-            <i class="fa-solid fa-trash is-clickable deletar"></i>
-        </div>
-    </li>
+## Overview
 
-Código modelo da li "Lista de compras": 
+This is the final project for "Lista de Compras" website using JavaScript.
 
-    <li class="item-compra is-flex is-justify-content-space-between" data-value="">
-        <div>
-            <input type="checkbox" class="is-clickable" />
-            <input type="text" class="is-size-5" value=""></input>
-        </div>
-        <div>
-            <i class="fa-solid fa-trash is-clickable deletar"></i>
-        </div>
-    </li>
+### The challenge
 
-Input com código refatorado:
+Users should be able to:
 
-    <div>
-        <input type="checkbox" checked class="is-clickable" />  
-        <span class="itens-comprados is-size-5">${elemento.valor}</span>
-    </div>
+Add, edit, delete items from list.
 
-Ícones de edição:
+### Screenshot
+![empty](./assets/screenshot/ss1.png)
+![some items](./assets/screenshot/ss2.png)
 
-    <i class="fa-regular fa-floppy-disk is-clickable"></i><i class="fa-regular is-clickable fa-pen-to-square editar"></i>
+### Links
+
+- Solution URL: [GitHub](https://github.com/ViniCellist/Alura-Lista-Compras)
+
+## My process
+
+Used semantic HTML5, CSS, JavaScript and JSON.
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS3
+- JavaSctipt
+- JSON
+
+### What I learned
+
+Practicing responsive websites.
+
+### Continued development
+
+I know for sure that this projects opened my mind to see webpage creation in a whole new perspective
+
+### Useful resources
+
+- [HTML 5](https://developer.mozilla.org/en-US/docs/Web) - HTML documentation.
+- [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS) - CSS documentation.
+- [JS](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) - JS documentation.
+
+## Author
+
+- GitHub - [Projects](https://github.com/ViniCellist)
+- Frontend Mentor - [Profile](https://www.frontendmentor.io/profile/ViniCellist)
+- LinkedIn - [Professional](https://www.linkedin.com/in/viniciussouzaduarte/)
+- Instagram - [Personal](https://www.instagram.com/vinicius_duartesd/)
